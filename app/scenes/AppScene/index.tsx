@@ -27,7 +27,7 @@ import {
 import Counter from '../../components/Counter';
 
 import EnvironmentConstants from '../../constants/EnvironmentConstants';
-import {goToLaunchScene} from '../../utils/NavigationUtils';
+import {goToLaunchScene, goToSignUpScene} from '../../utils/NavigationUtils';
 import Images from '../../images';
 import I18n from '../../i18n/i18n';
 
@@ -36,6 +36,10 @@ const AppScene = () => {
   const goToLaunchScreen = () => {
     goToLaunchScene();
   };
+  const goToSignUpScreen = () => {
+    goToSignUpScene();
+  };
+
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
@@ -50,6 +54,9 @@ const AppScene = () => {
             </View>
           )}
           <Image source={Images.ibHubsLogo} />
+          <View style={styles.signUpForm}>
+            <Text onPress={goToSignUpScreen}>SignUp Form</Text>
+          </View>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text>{EnvironmentConstants.SAMPLE_ENV_VARIABLE}</Text>
@@ -79,6 +86,7 @@ const AppScene = () => {
                 Read the docs to discover what to do next:
               </Text>
             </View>
+
             <LearnMoreLinks />
             <Counter />
           </View>
@@ -124,6 +132,11 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right',
+  },
+  signUpForm: {
+    height: 50,
+    borderWidth: 3,
+    borderColor: 'green',
   },
 });
 

@@ -1,0 +1,10 @@
+
+[
+    {"label":"CSE", "value": 0},
+    {"label":"ECE", "value": 1},
+    {"label":"IT", "value": 2},
+    {"label":"MECH", "value": 3},
+    {"label":"CIVIL", "value": 4}
+
+  
+]
